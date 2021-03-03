@@ -1,10 +1,11 @@
 class DockingStation
   def release_bike
-    print "bike released"
+    @bike = Bike.new
   end
 end
 
 class Bike
   def working?
+    true
   end
 end
