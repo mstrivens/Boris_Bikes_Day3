@@ -11,7 +11,11 @@ attr_reader :bike
   end
 
   def dock_bike(bike)
-    @bike = bike
+    if @bike == nil
+      @bike = bike
+    else
+      raise ("No space available")
+    end
   end
 
 end
