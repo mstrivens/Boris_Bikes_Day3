@@ -12,6 +12,9 @@ attr_reader :capacity
 
   def release_bike
     raise "No bikes available" if empty?
+    bike = @bikes.last
+    bike_status = bike.status
+    p  raise "Bike unavailable" unless (bike_status == true)
     @bikes.pop
   end
 
@@ -33,7 +36,10 @@ attr_reader :capacity
 end
 
 class Bike
+
+attr_accessor :status
+
   def working?
-    true
+    @status == true
   end
 end
