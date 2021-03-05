@@ -33,3 +33,9 @@ bike responds to: working_not_working, released, use_bike
 docking station responds to: release_bike
 
 person sends message: use_bike, bike_status
+
+Challenge 14 - user story
+
+As a system maintainer,
+So that I can plan the distribution of bikes,
+I want a docking station to have a default capacity of 20 bikes.
