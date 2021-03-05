@@ -25,9 +25,9 @@ describe DockingStation do
      expect{subject.release_bike}.to raise_error("No bikes available")
    end
 
-   it "doesn't accept more than 20 bikes" do
+   it "doesn't accept more than DEFAULT_CAPACITY bikes" do
      bike = Bike.new
-     20.times {
+     DockingStation::DEFAULT_CAPACITY.times {
      subject.dock_bike(bike) }
      expect{subject.dock_bike(bike)}.to raise_error("No space available")
    end
