@@ -14,7 +14,7 @@ attr_reader :capacity
     raise "No bikes available" if empty?
     bike = @bikes.last
     bike_status = bike.status
-    p  raise "Bike unavailable" unless (bike_status == true)
+    raise "Bike unavailable" unless (bike_status == true)
     @bikes.pop
   end
 
